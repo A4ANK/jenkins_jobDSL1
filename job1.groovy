@@ -52,7 +52,7 @@ buildPipelineView('project-A') {
     filterExecutors()
     title('Project A CI Pipeline')
     displayedBuilds(5)
-    selectedJob('project-A-compile')
+    selectedJob('Job1')
     alwaysAllowManualTrigger()
     showPipelineParameters()
     refreshFrequency(60)
