@@ -8,7 +8,7 @@ job("Job3"){
             upstream('Job1', 'SUCCESS')
     }
     steps {
-        shell ('
+        shell ('''
             statuscode=$(curl -s -o /dev/null -w "%{http_code}" 192.168.99.101:31000/index.html)
             if [ $statuscode == '200' ]
             then
@@ -18,6 +18,6 @@ job("Job3"){
                 echo "Error code $statuscode"
                 exit 1
             fi
-        ')
+        ''')
     }
 }

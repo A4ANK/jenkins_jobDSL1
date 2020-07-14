@@ -9,7 +9,7 @@ job("Job1"){
         gitHubPushTrigger()   
     }
     steps {
-        shell ('
+        shell ('''
             sudo cp -rf * /storage/
             if sudo kubectl get pvc httpd-pvc
             then
@@ -43,6 +43,6 @@ job("Job1"){
                 sudo kubectl apply -f /storage/httpd-deployment.yml
                 echo "Creating Deployment"
             fi
-        ')
+        ''')
     }
 }

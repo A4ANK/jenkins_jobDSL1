@@ -9,7 +9,7 @@ job("Job4"){
             cron('* * * * *')
     }
     steps {
-        shell ('
+        shell ('''
             if [ $(curl -s -o /dev/null -w "%{http_code}" 192.168.99.101:31000/index.html) == '200' ]
             then
                 echo "Webpage tested successfully"
@@ -21,6 +21,6 @@ job("Job4"){
                 curl --user "admin:redhat" http://192.168.99.102:8080/job/Job1/build?token=secret
                 exit 0
             fi
-        ')
+        ''')
     }
 }
