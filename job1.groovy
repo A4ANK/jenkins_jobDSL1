@@ -1,7 +1,7 @@
 job("Job1"){
     description("first job")
     authenticationToken('secret')
-
+    restrictToLabel('dynamic')
     scm {
         github('A4ANK/jenkins_jobDSL1', 'master')
     }
