@@ -1,6 +1,5 @@
 job("Job3"){
     description("Third job")
-    label('dynamic')
     triggers {
             upstream('Job1', 'SUCCESS')
     }

@@ -1,6 +1,5 @@
 job("Job4"){
     description("Fourth job")
-    label('dynamic')
     triggers {
             upstream('Job3', 'SUCCESS')
             cron('* * * * *')
