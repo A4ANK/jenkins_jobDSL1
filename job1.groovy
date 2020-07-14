@@ -1,5 +1,5 @@
 job("Job1"){
-    description("first job")
+    description("First job")
     authenticationToken('secret')
     label('dynamic')
     scm {
