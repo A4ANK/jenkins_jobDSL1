@@ -161,6 +161,9 @@ So now we have generated required jobs using Jenkins JobDSL scripts and also bui
 ![images/8.png](images/8.png)
 ![images/9.png](images/9.png)
 
+### Also, we are using labels to restrict the generated jobs to be build on the Docker cloud nodes.
+![images/10.png](images/10.png)
+
 ### Here we can see our data is persistent and K8s resources are running using kubectl client command.
 ```
 [root@server ~]# ls /storage/
